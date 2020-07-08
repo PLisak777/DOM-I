@@ -62,3 +62,14 @@ ctaHead.textContent = siteContent["cta"]["h1"];
 let ctaBtn = document.querySelector('button');
 
 ctaBtn.textContent = siteContent["cta"]["button"];
+
+// Main Content
+
+let midImg = document.querySelector('.middle-img');
+midImg.src = siteContent["main-content"]["middle-img-src"];
+
+let featureHead = document.querySelector('.text-content h4');
+featureHead.textContent = siteContent["main-content"]["features-h4"];
+
+let featText = document.querySelector('.text-content p');
+featText.textContent = siteContent["main-content"]["features-content"];
