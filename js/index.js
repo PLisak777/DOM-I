@@ -43,6 +43,8 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 // BEHOLD: MY STUFF
 
+// NAV Section
+
 let navList = document.querySelectorAll('nav a');
 navList[0].textContent = siteContent["nav"]["nav-item-1"];
 navList[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -59,12 +61,26 @@ let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"]);
 
 let ctaHead = document.querySelector('h1');
-
 ctaHead.textContent = siteContent["cta"]["h1"];
 
 let ctaBtn = document.querySelector('button');
-
 ctaBtn.textContent = siteContent["cta"]["button"];
+
+// Append/Prepend Section Start
+
+const newNavElement = document.createElement('a');
+newNavElement.textContent = 'Prepend';
+newNavElement.style.color = 'green';
+
+const newNavEl = document.createElement('a');
+newNavEl.textContent = 'Append';
+newNavEl.style.color = 'green';
+
+const parentElement = document.querySelector('nav');
+parentElement.prepend(newNavElement);
+parentElement.appendChild(newNavEl);
+
+// Append/Prepend Section End
 
 // Main Content
 
